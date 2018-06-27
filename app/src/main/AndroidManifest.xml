@@ -17,13 +17,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".NumberActivity"
-            android:label="Number" />
+            android:label="@string/category_numbers" />
+
         <activity android:name=".ColorActivity"
-            android:label="Color"/>
+            android:label="@string/category_colors"/>
+
         <activity android:name=".PhrasesActivity"
-            android:label="Phrases"/>
+            android:label="@string/category_phrases"/>
+
         <activity android:name=".FamilyMemebrActivity"
-            android:label="Family"/>
+            android:label="@string/category_family"/>
     </application>
 
 </manifest>
