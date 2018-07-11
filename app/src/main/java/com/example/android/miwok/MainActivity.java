@@ -1,14 +1,10 @@
 package com.example.android.miwok;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //create intente to new activity number when textView number have been clicked
-                Intent intent = new Intent(MainActivity.this, NumberActivity.class);
+                Intent intent = new Intent(MainActivity.this, NumbersActivity.class);
                 startActivity(intent);
             }
         });

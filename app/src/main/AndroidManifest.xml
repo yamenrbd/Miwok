@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NumberActivity"
+        <activity android:name=".NumbersActivity"
             android:label="@string/category_numbers" />
 
         <activity android:name=".ColorActivity"
