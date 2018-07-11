@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--هذا عبارة عن ملف XML منفصل من دون ملف جافا مرتبط به و يوجد به اثنين TextView يستخدم كل منهم لتعبئة ال ListView الموجود ب
+  ملف ال activity_number.xml و يتم التعبئة باستخدم ListAdapter بالجافا-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

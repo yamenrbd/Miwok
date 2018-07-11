@@ -21,6 +21,7 @@
     android:background="@color/tan_background"
     android:orientation="vertical"
     tools:context="com.example.android.miwok.MainActivity">
+    <!--هذه هي الصفحة الرئيسية يوجد بها اربع TextView كل وحدة فيا نوع رئيسي من الكلمات ( ارقام , اسماء العائلة , الالوان , العباراتا-->
 
     <TextView
         android:id="@+id/numbers"

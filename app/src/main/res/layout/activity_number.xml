@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--هذه هي صفحة الارقام و يوجد بها ListView واحد فقط له ID = list
+مجهز لاستلام المعلومات من ملف الجافا المرتبط به و هو NumberActivity.java-->
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
