@@ -17,7 +17,8 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number);
 
-        // create arrayList that can hold name of numbers from 1 to 10
+        // create ArrayList from type object word that created from Class Word
+        //then add in line ten words each one use the constraction with two String
         ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("one","lutti"));
         words.add(new Word("two","otiiko"));
@@ -34,7 +35,10 @@ public class NumbersActivity extends AppCompatActivity {
 
 
 
-
+        //here we create adapter from class WordAdapter that we create this adapter use constraction of the context and ArrayList
+        //that we created inthe upper section
+        //then create listView from class ListView and add in it the list from xml file we create activity_number.xml
+        //and add in that listView the adapter we create that contain the two words
 
         WordAdapter adapter = new WordAdapter(this, words);
 
