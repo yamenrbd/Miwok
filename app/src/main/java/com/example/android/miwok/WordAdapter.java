@@ -57,6 +57,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // the image in list_item.xml
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
+        // if the currentWord has an image and return true it will set the imageView
+        //from imageresourceID and if return false it will make the ImageView desipear
+        //using view.gone method
         if (currentWord.hasImage()) {
             imageView.setImageResource(currentWord.getImageResurceId());
             imageView.setVisibility(View.VISIBLE);
