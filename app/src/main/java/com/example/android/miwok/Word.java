@@ -3,12 +3,11 @@ package com.example.android.miwok;
 //item that can be String or Object and we need to insert two string inside that ListAdapter the only way to do that is to create
 //object that have two String on it
 
-import android.media.Image;
-
 public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int  mImageResurceId;
+    private int mImageResurceId = NO_IMAGE_PROVIDED;
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     public Word(String defaultTranslation , String miwokTranslation){
         mDefaultTranslation = defaultTranslation ;
@@ -19,7 +18,10 @@ public class Word {
     public Word (String defaultTranslation , String miwokTranslation , int resourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+
         mImageResurceId = resourceId ;
+
+
     }
 
     public String getDefaultTranslation(){
@@ -43,4 +45,10 @@ public class Word {
     public void setImageResurceId(int imageResurceId) {
         mImageResurceId = imageResurceId;
     }
+
+    //check if there resource image in mImageResource
+    public boolean hasImage(){
+       return mImageResurceId != NO_IMAGE_PROVIDED;
+    }
+
 }

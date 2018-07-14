@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,19 +32,37 @@ public class WordAdapter extends ArrayAdapter<Word> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
+        //create listItemView from type View and check if the listItemView is empty
+        //it will git all data from list_item.xml and inflate them in the listItemView View
+
         View listItemView = convertView;
-        if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
+        if (listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
+        //create object currentWord from type Word class and get the position which will be 0
         Word currentWord = getItem(position);
 
+        //create textView defaultTranslation from type TextView and connect it to
+        // the default_text_view in list_item.xml
         TextView defaultTranslation = (TextView) listItemView.findViewById(R.id.default_text_view);
         defaultTranslation.setText(currentWord.getDefaultTranslation());
 
+        //create textView miwak from type TextView and connect it to
+        // the miwak_text_view in list_item.xml
         TextView miwak = (TextView) listItemView.findViewById(R.id.miwak_text_view);
-
         miwak.setText(currentWord.getMiwokTranslation());
+
+        //create an imageIcon from type of ImageView and connect it to
+        // the image in list_item.xml
+
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
+        if (currentWord.hasImage()) {
+            imageView.setImageResource(currentWord.getImageResurceId());
+            imageView.setVisibility(View.VISIBLE);
+        } else{
+            imageView.setVisibility(View.GONE);
+    }
 
         return listItemView;
     }
