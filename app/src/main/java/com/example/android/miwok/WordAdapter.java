@@ -3,6 +3,7 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +24,11 @@ import java.util.ArrayList;
 // store all that in the listItemView that we create it earlier  and return that listItemView
 
 public class WordAdapter extends ArrayAdapter<Word> {
-    public WordAdapter(Activity context, ArrayList<Word> words){
+    private int mColorResourceId;
+
+    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId){
         super(context,0,words);
+        mColorResourceId = colorResourceId;
     }
 
 
@@ -43,6 +47,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //create object currentWord from type Word class and get the position which will be 0
         Word currentWord = getItem(position);
 
+
         //create textView defaultTranslation from type TextView and connect it to
         // the default_text_view in list_item.xml
         TextView defaultTranslation = (TextView) listItemView.findViewById(R.id.default_text_view);
@@ -52,6 +57,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // the miwak_text_view in list_item.xml
         TextView miwak = (TextView) listItemView.findViewById(R.id.miwak_text_view);
         miwak.setText(currentWord.getMiwokTranslation());
+
 
         //create an imageIcon from type of ImageView and connect it to
         // the image in list_item.xml
@@ -67,6 +73,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setVisibility(View.GONE);
     }
 
+    View textContainer = listItemView.findViewById(R.id.text_container);
+        int color = ContextCompat.getColor(getContext(),mColorResourceId);
+        textContainer.setBackgroundColor(color);
         return listItemView;
     }
 

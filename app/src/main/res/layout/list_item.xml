@@ -2,32 +2,44 @@
 
 <!--هذا عبارة عن ملف XML منفصل من دون ملف جافا مرتبط به و يوجد به اثنين TextView يستخدم كل منهم لتعبئة ال ListView الموجود ب
   ملف ال activity_number.xml و يتم التعبئة باستخدم ListAdapter بالجافا-->
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+              android:minHeight="@dimen/list_item_height"
+              android:background="@color/tan_background"
+    >
+
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
         android:src="@mipmap/ic_launcher"
-        android:paddingRight="16dp"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp"/>
+        android:background="#FFF7DA"
+        />
 
     <LinearLayout
+        android:id="@+id/text_container"
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/list_item_height"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        >
 
         <TextView
             android:id="@+id/miwak_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="lutti"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
             />
 
         <TextView
@@ -35,7 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="one"
-
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
             />
     </LinearLayout>
 

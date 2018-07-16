@@ -37,7 +37,7 @@ public class FamilyMemebrActivity extends AppCompatActivity {
         //then create listView from class ListView and add in it the list from xml file we create activity_number.xml
         //and add in that listView the adapter we create that contain the two words
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words,R.color.category_family);
 
         ListView listView = (ListView) findViewById(R.id.list_family_member);
 
