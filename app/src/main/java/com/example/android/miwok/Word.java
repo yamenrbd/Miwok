@@ -6,19 +6,21 @@ package com.example.android.miwok;
 public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
+    private int mSongId ;
     private int mImageResurceId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Word(String defaultTranslation , String miwokTranslation){
+    public Word(String defaultTranslation , String miwokTranslation , int song){
         mDefaultTranslation = defaultTranslation ;
         mMiwokTranslation = miwokTranslation ;
+        mSongId = song;
     }
 
 
-    public Word (String defaultTranslation , String miwokTranslation , int resourceId){
+    public Word (String defaultTranslation , String miwokTranslation , int resourceId , int song){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
-
+        mSongId= song;
         mImageResurceId = resourceId ;
 
 
@@ -30,6 +32,7 @@ public class Word {
     public String getMiwokTranslation(){
         return mMiwokTranslation;
     }
+    public int getmSongId() {return mSongId; }
 
     public void setDefaultTranslation(String defaultTranslation){
         mDefaultTranslation = defaultTranslation;
