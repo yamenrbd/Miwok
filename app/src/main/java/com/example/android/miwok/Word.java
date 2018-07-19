@@ -54,4 +54,14 @@ public class Word {
        return mImageResurceId != NO_IMAGE_PROVIDED;
     }
 
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mSongId=" + mSongId +
+                ", mImageResurceId=" + mImageResurceId +
+                '}';
+    }
 }
