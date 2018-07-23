@@ -4,41 +4,46 @@ package com.example.android.miwok;
 //object that have two String on it
 
 public class Word {
+    private static final int NO_IMAGE_PROVIDED = -1;
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mSongId ;
+    private int mSongId;
     private int mImageResurceId = NO_IMAGE_PROVIDED;
-    private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Word(String defaultTranslation , String miwokTranslation , int song){
-        mDefaultTranslation = defaultTranslation ;
-        mMiwokTranslation = miwokTranslation ;
+    public Word(String defaultTranslation, String miwokTranslation, int song) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
         mSongId = song;
     }
 
 
-    public Word (String defaultTranslation , String miwokTranslation , int resourceId , int song){
+    public Word(String defaultTranslation, String miwokTranslation, int resourceId, int song) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
-        mSongId= song;
-        mImageResurceId = resourceId ;
+        mSongId = song;
+        mImageResurceId = resourceId;
 
 
     }
 
-    public String getDefaultTranslation(){
+    public String getDefaultTranslation() {
         return mDefaultTranslation;
     }
-    public String getMiwokTranslation(){
-        return mMiwokTranslation;
-    }
-    public int getmSongId() {return mSongId; }
 
-    public void setDefaultTranslation(String defaultTranslation){
+    public void setDefaultTranslation(String defaultTranslation) {
         mDefaultTranslation = defaultTranslation;
     }
-    public void setMiwokTranslation(String miwokTranslation){
-        mMiwokTranslation = miwokTranslation ;
+
+    public String getMiwokTranslation() {
+        return mMiwokTranslation;
+    }
+
+    public void setMiwokTranslation(String miwokTranslation) {
+        mMiwokTranslation = miwokTranslation;
+    }
+
+    public int getmSongId() {
+        return mSongId;
     }
 
     public int getImageResurceId() {
@@ -50,8 +55,8 @@ public class Word {
     }
 
     //check if there resource image in mImageResource
-    public boolean hasImage(){
-       return mImageResurceId != NO_IMAGE_PROVIDED;
+    public boolean hasImage() {
+        return mImageResurceId != NO_IMAGE_PROVIDED;
     }
 
 

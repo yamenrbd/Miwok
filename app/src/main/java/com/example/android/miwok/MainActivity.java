@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String [] numberName = new String[10];
-        numberName[0]= "one";
+        String[] numberName = new String[10];
+        numberName[0] = "one";
     }
 }

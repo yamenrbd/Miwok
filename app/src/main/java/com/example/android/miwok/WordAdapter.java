@@ -26,8 +26,8 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word> {
     private int mColorResourceId;
 
-    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId){
-        super(context,0,words);
+    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
+        super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
 
@@ -69,16 +69,15 @@ public class WordAdapter extends ArrayAdapter<Word> {
         if (currentWord.hasImage()) {
             imageView.setImageResource(currentWord.getImageResurceId());
             imageView.setVisibility(View.VISIBLE);
-        } else{
+        } else {
             imageView.setVisibility(View.GONE);
-    }
+        }
 
-    View textContainer = listItemView.findViewById(R.id.text_container);
-        int color = ContextCompat.getColor(getContext(),mColorResourceId);
+        View textContainer = listItemView.findViewById(R.id.text_container);
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
         textContainer.setBackgroundColor(color);
         return listItemView;
     }
-
 
 
 }
